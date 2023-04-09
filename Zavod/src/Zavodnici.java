@@ -39,11 +39,9 @@ public class Zavodnici {
         }
     }
 
-    public void setRaceName(String raceName, String name, String surname) {
+    public void setRaceName(String raceName) {
         for (int i = 0; i < Zavodnici.length; i++) {
-            if (Zavodnici[i].getName().equals(name) && Zavodnici[i].getSurname().equals(surname)) {
-                Zavodnici[i].setRaceName(raceName);
-            }
+            Zavodnici[i].setRaceName(raceName);
         }
     }
 
@@ -68,6 +66,12 @@ public class Zavodnici {
             if (Zavodnici[i].getName().equals(name) && Zavodnici[i].getSurname().equals(surname)) {
                 Zavodnici[i].setStartingTime(hours, minutes, seconds);
             }
+        }
+    }
+    
+    public void setStartingTimeAll(int hours,int minutes,int seconds){
+        for(int i =0;i<Zavodnici.length;i++){
+            Zavodnici[i].setStartingTime(hours,minutes,seconds);
         }
     }
 
