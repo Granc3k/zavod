@@ -86,5 +86,18 @@ public class Zavodnici {
     public String toString(int i) {
         return Zavodnici[i].toString();
     }
+    
+    public void getWinner() {
+        int temp = 6942000;
+        int vyherce = 0;
+        for (int i = 0; i < Zavodnici.length; i++) {
+            if (Zavodnici[i].calculateTime < temp) {
+                vyherce = i;
+                temp = Zavodnici[i].calculateTime();
+            }
+        }
+        System.out.println("Výherce závodu je " + Zavodnici[vyherce].toString());
+    }
+
 
 }
